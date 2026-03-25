@@ -1,0 +1,42 @@
+### Unused - prior config ###
+
+{ config, ... }:
+let
+  dataDir = "/data/sushijam";
+  homeDir = "/home/sushijam";
+  # dotfilesDir = homeDir + "/dotfiles";
+in
+{
+  home.username = "sushijam";
+  home.homeDirectory = homeDir;
+  home.stateVersion = "25.11";
+  # home.packages = [];
+
+  home.file = {
+    Downloads.source = config.lib.file.mkOutOfStoreSymlink dataDir + "/Downloads";
+    Documents.source = config.lib.file.mkOutOfStoreSymlink dataDir + "/Documents";
+    Games.source = config.lib.file.mkOutOfStoreSymlink dataDir + "/Games";
+    Pictures.source = config.lib.file.mkOutOfStoreSymlink dataDir + "/Pictures";
+    Steam.source = config.lib.file.mkOutOfStoreSymlink dataDir + "/Games/Steam";
+  };
+
+  programs.fzf.enable = true;
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+    shellAliases = {
+      ls = "ls -lah";
+      nrs = "sudo nixos-rebuild switch --flake ~/nixos#desktop";
+      hms = "home-manager switch -b backup";
+      fupdate = "nix flake update";
+    };
+  };
+
+  home.sessionVariables = {
+    EDITOR = "vim";
+  };
+
+  programs.home-manager.enable = true;
+}
