@@ -2,7 +2,6 @@
 {
   flake.nixosModules.directories =
     {
-      config,
       ...
     }:
     {

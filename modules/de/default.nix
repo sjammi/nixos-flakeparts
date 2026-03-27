@@ -1,7 +1,7 @@
 { self, ... }:
 {
   flake.nixosModules.desktopEnvironment =
-    { pkgs, ... }:
+    { ... }:
     {
       imports = [
         self.nixosModules.mango

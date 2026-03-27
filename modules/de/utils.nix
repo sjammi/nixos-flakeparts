@@ -1,4 +1,4 @@
-{ self, ... }:
+{ ... }:
 {
   flake.nixosModules.deUtils =
     { pkgs, ... }:
@@ -24,6 +24,7 @@
         gpu-usage-waybar
 
         blueman
+        imagemagick
       ];
     };
 }
