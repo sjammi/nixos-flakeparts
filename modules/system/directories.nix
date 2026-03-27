@@ -1,0 +1,10 @@
+{ ... }:
+{
+  flake.nixosModules.directories =
+    {
+      config,
+      ...
+    }:
+    {
+    };
+}
