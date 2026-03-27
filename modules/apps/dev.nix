@@ -39,6 +39,7 @@
         docker
         docker-compose
         gh
+        starship
       ];
     };
 
