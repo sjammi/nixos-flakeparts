@@ -9,9 +9,10 @@
       imports = [
         self.nixosModules.desktopHardware
         self.nixosModules.desktopSystemConfig
-        self.nixosModules.generalApps
-        self.nixosModules.dev
-        self.nixosModules.gaming
+        self.nixosModules.appsGeneral
+        self.nixosModules.appsDev
+        self.nixosModules.appsGaming
+        self.nixosModules.desktopEnvironment
       ];
 
       services.printing.enable = true;
@@ -24,6 +25,9 @@
           "networkmanager"
           "wheel"
           "i2c"
+          "audio"
+          "video"
+          "input"
         ];
         packages = with pkgs; [
           tree
@@ -35,12 +39,14 @@
         vim
         wget
         git
+        curl
         bat
         xclip
         ddcutil
         unzip
         ripgrep
         tealdeer
+        chezmoi
       ];
 
       system.stateVersion = "25.11";

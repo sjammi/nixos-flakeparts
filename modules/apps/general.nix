@@ -1,6 +1,6 @@
 { inputs, ... }:
 {
-  flake.nixosModules.generalApps =
+  flake.nixosModules.appsGeneral =
     { pkgs, ... }:
     {
       imports = [
@@ -33,6 +33,7 @@
           gimp
           libreoffice-still
           proton-vpn-cli
+          fzf
         ]
       );
     };

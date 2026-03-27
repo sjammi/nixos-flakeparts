@@ -6,7 +6,6 @@
       imports = [
         self.nixosModules.nix
         self.nixosModules.customHardware
-        # self.nixosModules.homeManager
       ];
 
       fileSystems."/data" = {
@@ -43,9 +42,6 @@
       services.power-profiles-daemon.enable = true;
       services.upower.enable = true;
 
-      # Enable the GNOME Desktop Environment.
-      services.xserver.displayManager.gdm.enable = true;
-      services.xserver.desktopManager.gnome.enable = true;
       services.xserver = {
         enable = true;
         autoRepeatDelay = 200;
@@ -54,10 +50,6 @@
           layout = "us";
           variant = "";
         };
-      };
-      services.displayManager.autoLogin = {
-        enable = true;
-        user = "sushijam";
       };
 
       services.printing.enable = true;
@@ -68,6 +60,7 @@
         alsa.enable = true;
         alsa.support32Bit = true;
         pulse.enable = true;
+        jack.enable = true;
       };
 
       hardware = {

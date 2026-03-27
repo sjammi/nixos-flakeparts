@@ -1,6 +1,6 @@
 { inputs, ... }:
 {
-  flake.nixosModules.gaming =
+  flake.nixosModules.appsGaming =
     { pkgs, ... }:
     {
       users.users.sushijam.packages = (
@@ -23,6 +23,7 @@
         gamescopeSession.enable = true;
       };
 
+      hardware.xone.enable = true;
       programs.gamemode.enable = true;
     };
 }
