@@ -11,7 +11,7 @@
 
         shellAliases = {
           ls = "ls -la";
-          nrs = "sudo nixos-rebuild switch";
+          nrs = "sudo nixos-rebuild switch --flake .#desktop";
         };
 
         histSize = 10000;
@@ -40,6 +40,7 @@
         docker-compose
         gh
         starship
+        pyenv
       ];
     };
 

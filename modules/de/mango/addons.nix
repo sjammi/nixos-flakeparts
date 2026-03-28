@@ -1,6 +1,6 @@
 { ... }:
 {
-  flake.nixosModules.deUtils =
+  flake.nixosModules.mangoAddons =
     { pkgs, ... }:
     {
       programs.waybar.enable = true;
@@ -9,10 +9,11 @@
       services.hypridle.enable = true;
 
       services.blueman.enable = true;
-      security.polkit.enable = true;
 
       environment.systemPackages = with pkgs; [
         swaynotificationcenter
+        libnotify
+
         swww
         matugen
         rofi
@@ -25,6 +26,8 @@
 
         blueman
         imagemagick
+
+        kora-icon-theme
       ];
     };
 }

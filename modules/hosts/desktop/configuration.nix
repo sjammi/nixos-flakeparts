@@ -12,7 +12,7 @@
         self.nixosModules.appsGeneral
         self.nixosModules.appsDev
         self.nixosModules.appsGaming
-        self.nixosModules.desktopEnvironment
+        self.nixosModules.deMango
       ];
 
       services.printing.enable = true;

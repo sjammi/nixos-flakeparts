@@ -1,6 +1,6 @@
-{ self, ... }:
+{ ... }:
 {
-  flake.nixosModules.deFonts =
+  flake.nixosModules.mangoFonts =
     { pkgs, ... }:
     {
       fonts.packages = with pkgs; [
