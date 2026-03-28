@@ -31,6 +31,17 @@
         nix-inspect
       ];
 
+      system.autoUpgrade = {
+        enable = true;
+        flake = "/home/sushijam/nixos/flake.nix";
+        flags = [
+          "--print-build-logs"
+          "--commit-lock-file"
+        ];
+        dates = "02:00";
+        randomizedDelaySec = "45min";
+      };
+
       nix = {
         settings = {
           auto-optimise-store = true;
