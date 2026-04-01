@@ -12,6 +12,7 @@
         fira-code-symbols
         nerd-fonts.lilex
         nerd-fonts.space-mono
+        inter
       ];
     };
 }

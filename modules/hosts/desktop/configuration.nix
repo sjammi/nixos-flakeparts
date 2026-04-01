@@ -19,6 +19,7 @@
 
       users.users.sushijam = {
         shell = pkgs.zsh;
+        ignoreShellProgramCheck = true;
         isNormalUser = true;
         description = "";
         extraGroups = [

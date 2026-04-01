@@ -14,6 +14,8 @@
         enable = true;
       };
 
+      services.tailscale.enable = true;
+
       users.users.sushijam.packages = (
         with pkgs;
         [
@@ -34,6 +36,7 @@
           libreoffice-still
           proton-vpn-cli
           fzf
+          qbittorrent
         ]
       );
     };
