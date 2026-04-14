@@ -7,10 +7,20 @@
         zed-editor
         ghostty
         just
+        gh
+
         docker
         docker-compose
-        gh
+        podman-tui
       ];
-    };
 
+      virtualisation.containers.enable = true;
+      virtualisation = {
+        podman = {
+          enable = true;
+          dockerCompat = true;
+          defaultNetwork.settings.dns_enabled = true;
+        };
+      };
+    };
 }

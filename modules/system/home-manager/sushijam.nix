@@ -66,6 +66,16 @@ in
       home.packages = with pkgs; [
         pyenv
         nautilus
+        keepassxc
+        btop
+        neovim
+        ranger
+        yazi
+        wiremix
+        brave
+        filen-desktop
+        gimp
+        signal-desktop
       ];
     };
 }

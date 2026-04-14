@@ -7,7 +7,7 @@
         swaynotificationcenter
         libnotify
 
-        swww
+        awww
         matugen
         rofi
 

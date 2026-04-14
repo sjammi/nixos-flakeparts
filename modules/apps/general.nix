@@ -20,23 +20,13 @@
         with pkgs;
         [
           gearlever
-          keepassxc
-          btop
           duf
           fsarchiver
           glances
           cliphist
-          neovim
-          ranger
-          yazi
-          wiremix
-          brave
-          filen-desktop
-          gimp
-          libreoffice-still
           proton-vpn-cli
           fzf
-          qbittorrent
+          libreoffice-still
         ]
       );
     };
